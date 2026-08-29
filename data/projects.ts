@@ -155,7 +155,7 @@ export const projects: Project[] = [
       'Server-side metric rollups',
       'JWT authentication',
     ],
-    thumbnail: '/images/projects/analytics-platform.svg',
+    thumbnail: '/lifesync.png',
     liveUrl: undefined,
     githubUrl: undefined,
     caseStudy: {
@@ -213,7 +213,7 @@ export const projects: Project[] = [
     ],
     thumbnail: '/smartRestaurant.png',
     liveUrl: undefined,
-    githubUrl: "https://github.com/ameerjawa/MySmartResturant/",
+    githubUrl: undefined,
     caseStudy: {
       overview:
         'A real-time order-management platform that routes orders to kitchen stations and tracks table status across the restaurant floor.',
@@ -271,7 +271,7 @@ export const projects: Project[] = [
       'Cross-platform (iOS + Android)',
       'Local notification scheduling',
     ],
-    thumbnail: '/images/projects/medication-app.svg',
+    thumbnail: '/medi.png',
     liveUrl: undefined,
     githubUrl: undefined,
     caseStudy: {
@@ -342,7 +342,7 @@ export const projects: Project[] = [
   liveUrl: undefined,
 
   // Add this later if you upload the source code to GitHub
-  githubUrl: "https://github.com/ameerjawa/Teach_me",
+  githubUrl: undefined,
 
   caseStudy: {
     overview:
