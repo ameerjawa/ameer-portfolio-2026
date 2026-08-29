@@ -6,6 +6,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
+
 export async function OPTIONS() {
   return new NextResponse(null, {
     status: 204,
