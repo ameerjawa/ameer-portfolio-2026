@@ -8,6 +8,7 @@ export interface ArchitectureNode {
   detail?: string;
 }
 
+
 export interface ProjectCaseStudy {
   overview: string;
   problem: string;
