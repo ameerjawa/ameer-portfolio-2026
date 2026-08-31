@@ -6,7 +6,6 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-
 export async function OPTIONS() {
   return new NextResponse(null, {
     status: 204,
@@ -56,22 +55,27 @@ export async function POST(req: Request) {
     const publicKey = process.env.EMAILJS_PUBLIC_KEY;
     const privateKey = process.env.EMAILJS_PRIVATE_KEY;
 
-   if (!serviceId || !templateId || !publicKey) {
-  return NextResponse.json(
-    {
-      error: 'Email service is not configured.',
-      diagnostics: {
-        serviceId: Boolean(serviceId),
-        templateId: Boolean(templateId),
-        publicKey: Boolean(publicKey),
-      },
-    },
-    {
-      status: 500,
-      headers: corsHeaders,
+    // TEMPORARY NETLIFY ENVIRONMENT DIAGNOSTIC
+    const diagnostics = {
+      netlifySiteId: Boolean(process.env.SITE_ID),
+      netlifySiteName: Boolean(process.env.SITE_NAME),
+      serviceId: Boolean(serviceId),
+      templateId: Boolean(templateId),
+      publicKey: Boolean(publicKey),
+    };
+
+    if (!serviceId || !templateId || !publicKey) {
+      return NextResponse.json(
+        {
+          error: 'Email service is not configured.',
+          diagnostics,
+        },
+        {
+          status: 500,
+          headers: corsHeaders,
+        }
+      );
     }
-  );
-}
 
     const templateParams = {
       from_name: name.trim(),
@@ -97,8 +101,6 @@ export async function POST(req: Request) {
       template_params: templateParams,
     };
 
-    // Optional, but recommended if you enabled Private Key
-    // authorization in EmailJS.
     if (privateKey) {
       payload.accessToken = privateKey;
     }
@@ -124,7 +126,10 @@ export async function POST(req: Request) {
       );
 
       return NextResponse.json(
-        { error: 'Failed to send email.' },
+        {
+          error: 'Failed to send email.',
+          diagnostics,
+        },
         {
           status: 500,
           headers: corsHeaders,
@@ -133,7 +138,10 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json(
-      { ok: true },
+      {
+        ok: true,
+        diagnostics,
+      },
       {
         status: 200,
         headers: corsHeaders,
