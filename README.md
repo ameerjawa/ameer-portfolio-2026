@@ -6,8 +6,22 @@
 
 A modern, production-deployed portfolio showcasing my software engineering experience, projects, and technical capabilities.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-ameerjawabra.com-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ameerjawabra.com)
+[![Portfolio](https://img.shields.io/badge/Live_Portfolio-ameerjawabra.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ameerjawabra.com)
 [![GitHub](https://img.shields.io/badge/GitHub-ameerjawa-181717?style=for-the-badge&logo=github)](https://github.com/ameerjawa)
+
+</div>
+
+---
+
+## 🖥️ Portfolio Preview
+
+<div align="center">
+
+<a href="https://ameerjawabra.com">
+  <img src="./public/desktop-port.png" alt="Ameer Jawabra Full Stack Software Engineer Portfolio" width="100%" />
+</a>
+
+**[→ View Live Portfolio](https://ameerjawabra.com)**
 
 </div>
 
@@ -58,6 +72,30 @@ The application emphasizes **performance, responsive design, maintainable archit
 
 ---
 
+## 💼 Selected Work
+
+<div align="center">
+
+<img src="./public/work-port.png" alt="Selected software engineering projects and work" width="100%" />
+
+</div>
+
+The portfolio highlights selected projects across full-stack web development, SaaS applications, mobile development, cloud infrastructure, and production systems.
+
+---
+
+## 📱 Responsive Design
+
+The application was designed to provide a consistent experience across desktop and mobile devices.
+
+<div align="center">
+
+<img src="./public/mobile-port.png" alt="Ameer Jawabra portfolio mobile responsive design" width="320" />
+
+</div>
+
+---
+
 ## 🏗️ Project Architecture
 
 ```text
@@ -95,9 +133,9 @@ cd ameer-portfolio-2026
 npm install
 ```
 
-### 3. Configure environment variables
+### 3. Configure Environment Variables
 
-Create:
+Create a local environment file:
 
 ```text
 .env.local
@@ -105,15 +143,15 @@ Create:
 
 Add the required environment variables for external services.
 
-> Environment credentials and production secrets are intentionally excluded from source control.
+> Sensitive credentials and production secrets are intentionally excluded from source control.
 
-### 4. Start the development server
+### 4. Start the Development Server
 
 ```bash
 npm run dev
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:3000
@@ -123,9 +161,9 @@ http://localhost:3000
 
 ## ☁️ Deployment
 
-The application is deployed on **Cloudflare infrastructure** with **OpenNext** providing Next.js compatibility.
+The production application is deployed on **Cloudflare infrastructure** with **OpenNext** providing Next.js compatibility.
 
-Production secrets and environment-specific configuration are managed outside the repository.
+Environment-specific configuration and production secrets are managed outside the repository.
 
 🌐 **Production:** [ameerjawabra.com](https://ameerjawabra.com)
 
