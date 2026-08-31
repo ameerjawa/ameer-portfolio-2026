@@ -57,8 +57,11 @@ export async function POST(req: Request) {
     const privateKey = process.env.EMAILJS_PRIVATE_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      console.error('Missing EmailJS environment variables.');
-
+ console.error('Missing EmailJS environment variables:', {
+    serviceId: !!serviceId,
+    templateId: !!templateId,
+    publicKey: !!publicKey,
+  });
       return NextResponse.json(
         { error: 'Email service is not configured.' },
         {
