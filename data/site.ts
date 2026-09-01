@@ -9,7 +9,7 @@ export const siteConfig = {
     github: 'https://github.com/ameerjawa',
     linkedin: 'https://www.linkedin.com/in/ameer-jawabra-730a62191/',
   },
-  resumePath: '/resume/Ameer_Jawabra.pdf',
+  resumePath: '/resume/Ameer_Jawabra_Resume_2026.pdf',
   url: 'https://ameerjawabra.dev',
   description:
     'Full Stack Software Engineer specializing in React, Next.js, TypeScript, and Node.js. Building scalable web, mobile, backend, and cloud systems.',
